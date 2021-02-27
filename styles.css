@@ -1,0 +1,594 @@
+/* Importovao google font  */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Resetovao sve vrednosti na 0 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Kreiram varijable u root odakle cu manipulisati i pozivati boje*/
+
+:root {
+    --blue-text: #86ddff;
+    --dark-blue: #51463f;
+    --black: #0A0A0B;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navbar section */
+
+#mobile-nav {
+    display: none;
+}
+
+.nav-bar {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+
+/* Podesavanje ul sa flexom  */
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    list-style: none;
+    height: 10vh;
+    background-color: rgba(100, 100, 100, 0.2);
+}
+
+
+/*  podesavanje liste " a"  zato sto je link   */
+
+li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+/* podesavanje linka #name preko #id */
+
+#name {
+    color: var(var--blue-text);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/*  HERO SECTION */
+
+
+/* podesavanja vezana za hero sekciju */
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* container sa slikom  */
+
+.image-container {
+    position: relative;
+    background-image: url(./pictures/ja.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 2vh;
+    /* definisem vreme trajanja animacije  */
+    animation: scale 15s;
+}
+
+.image-me {
+    position: absolute;
+    width: 45vh;
+    height: 100%;
+    background: url(./pictures/ja.jpg);
+    z-index: 2;
+    margin-left: 300px;
+    margin-top: 300px;
+    margin-bottom: 100px;
+    border: 2px solid var(--blue-text);
+}
+
+
+/* akoristim animaciju da odzumiram images */
+
+@keyframes scale {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+/* Hero section begin */
+
+
+/* definisanje pozicije velicine boje  */
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.firstLeter {
+    text-transform: none;
+}
+
+.firstWord {
+    color: var(--blue-text);
+}
+
+
+/* uredjivanje okvira oko resume */
+
+.resume-cta {
+    border: 2px solid var(--blue-text);
+    width: 160px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.resume-text {
+    color: wheat;
+}
+
+
+/* hover za prelaz preko resume  */
+
+.resume-cta:hover {
+    background-color: rgba(100, 100, 100, 10);
+}
+
+
+/* END HERO SECTION  */
+
+
+/* PROJECT SECTION  */
+
+.projects-container {
+    width: 100%;
+    height: auto;
+    background: var(--dark-blue);
+}
+
+.project-header {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem solid black;
+    color: white;
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+
+/* Uerdjivanje kontejnera 1,2,3  */
+
+.my-projects1 {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    position: relative;
+    box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 50px;
+    background-image: url(./pictures/heroimg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.my-projects2 {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    position: relative;
+    box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 50px;
+    background-image: url(./pictures/logo2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.my-projects3 {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    position: relative;
+    box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 50px;
+    background-image: url(./pictures/kevin-bhagat-zNRITe8NPqY-unsplash\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* pozicioniranje teksta unutar kontejnera */
+
+.text-container {
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+
+/* animacija pomeranja teksta  */
+
+.text-container:hover {
+    height: 250px;
+}
+
+.name {
+    margin-top: 10px;
+    color: var(--dark-blue);
+    font-size: 2rem;
+}
+
+.content {
+    padding: 25px 0;
+    color: black;
+}
+
+.button {
+    border: 5px solid var(--blue-text);
+    width: 160px;
+    box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+
+/* ======ABOUT SECTION====== */
+
+.about-container {
+    margin: 2rem;
+    width: 100%;
+    height: ;
+    background-color: #342D31;
+    box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.about-image {
+    height: 250px;
+    width: 400px;
+    background-image: url(./pictures/komp&ja.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.img-container:hover .about-image {
+    opacity: 0.85;
+    transform: scale(1.2);
+}
+
+.about-text {
+    height: auto;
+    width: 40%;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 100px;
+}
+
+
+/* ====END ABOUT SECTION==== */
+
+
+/* SOCIAL ICON */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--blue-text);
+    font-size: 2rem;
+    width: 30%;
+    margin: 10% 35%;
+    padding: 20px 20px;
+    border-radius: 10%;
+}
+
+
+/* END SOCIAL ICON */
+
+
+/* FORM  */
+
+
+/*  MOBILE VIEW */
+
+
+/* =====================
+ ======================
+ PODESAVANJA ZA TELEFON */
+
+@media (max-width: 768px) {
+    #nav {
+        display: none;
+    }
+    #mobile-nav {
+        display: block;
+    }
+    .mobile-nav-bar {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 5;
+    }
+    ul {
+        background-color: rgba(0, 0, 0, 0.625);
+    }
+    /* Preko medija kverija regulisem velicinu 
+ displeja za manje telefone */
+    .my-projects1 {
+        width: 250px;
+        height: 300px;
+        background: #fff;
+        position: relative;
+        box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        margin: 50px;
+        background-image: url(./pictures/kevin-bhagat-zNRITe8NPqY-unsplash\ \(1\).jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .my-projects2 {
+        width: 250px;
+        height: 300px;
+        background: #fff;
+        position: relative;
+        box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        margin: 50px;
+        background-image: url(./pictures/logo2.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .my-projects3 {
+        width: 250px;
+        height: 300px;
+        background: #fff;
+        position: relative;
+        box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        margin: 50px;
+        background-image: url(./pictures/kevin-bhagat-zNRITe8NPqY-unsplash\ \(1\).jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark-blue);
+        box-shadow: 15px 7px 30px 7px rgba(0, 0, 0, 0.2);
+    }
+    /* ovde uneo druge vrednosti za velicinu slie 
+zbog mobilnog */
+    .image-me {
+        position: absolute;
+        width: 100vh;
+        height: 100%;
+        background: url(./pictures/Screenshot_1.png);
+        z-index: 2;
+        margin-left: 100px;
+        margin-top: 200px;
+        margin-bottom: 100px;
+        border: 2px solid var(--blue-text);
+    }
+    .about-image {
+        margin-top: 20px;
+        height: 100px;
+        width: 225px;
+        background-image: url(./pictures/komp&ja.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .about-text {
+        margin-left: 20px;
+        width: 100%;
+        font-size: 0.75rem;
+    }
+    .contactme {
+        background: var(--dark-blue);
+    }
+    .social-icons {
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
+
+
+/*  END MOBILE VIEW */
+
+
+/* ===FORMM=== */
+
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.contact {
+    text-align: center;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    .styled-input {
+        width: 100%;
+    }
+}
+
+.styled-input label {
+    color: var(--dark-blue);
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--dark-blue);
+    color: black;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+input:focus~span,
+textarea:focus~span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-form {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    float: right;
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    margin-bottom: 25px;
+}
+
+.submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+}
+
+input[type=checkbox]+label {
+    color: #ccc;
+    font-style: italic;
+}
+
+input[type=checkbox]:checked+label {
+    color: #f00;
+    font-style: normal;
+}
+
+
+/* === END FORMM=== */
+
+
+/* Teba povezati form sa e mailom svojim 
+ ======================================
+ =====================================
+ =================================== */
